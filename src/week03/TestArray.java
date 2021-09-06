@@ -35,15 +35,16 @@ public class TestArray {
 		int[] shoppingList=new int[100];
 		int count=0;//商品数量
 		while (true) {
-
+			//1-输入商品编码
 			System.out.println("请输入商品的编码：");
 
 			String code = in.next();
+			//2-判断，如果输入000，结束，跳出循环，否则，继续结算
 			if (code.equals("000")) {
 				break;//跳出循环
 			}
 
-			// 找到编码数组中输入编码的下标值
+			// 3-找到输入编码的位置（下标值）
 			int index = -1;// 商品在数组中的位置
 			// 找到编码，位置的范围0-5（数组的长度-1）
 			// 没有找到-1
@@ -53,23 +54,28 @@ public class TestArray {
 					break;
 				}
 			}
+			//4-根据找到的位置，如果是-1，没有这个商品；否则，从价格数组的而对应位置找到价格，累加
 
 			if (index == -1) {
 				System.out.println("没有这个商品");
 			} else {
 				System.out.println("找到，位置=" + index);
-				// 根据位置index到价格数组的对应位置，找到价格，累加
+				//将位置添加到购物清单，购物的商品数+1
 				shoppingList[count++]=index;
-
+				// 根据位置index到价格数组的对应位置，找到价格，累加
 				sum = sum + goodsPrice[index];
 			}
 		}
-		//打印小票，名字，价格
+		//5-打印小票，名字，价格
+		//有几个商品，循环几次
+		System.out.println("-------购物小票------- ");
+		System.out.println("商品编号\t商品名\t单价	");
 		for (int i = 0; i < count; i++) {
 			System.out.println(goodsName[i]+"\t"+goodsPrice[i]);
 		}
+		System.out.println("--------------------");
 
-		System.out.println("sum=" + sum);
+		System.out.println("应付款：" + sum);
 
 	}
 }
