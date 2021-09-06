@@ -71,7 +71,7 @@ public class TestArray {
 		System.out.println("-------购物小票------- ");
 		System.out.println("商品编号\t商品名\t单价	");
 		for (int i = 0; i < count; i++) {
-			System.out.println(goodsName[i]+"\t"+goodsPrice[i]);
+			System.out.println(goodsCode[i]+"\t"+goodsName[i]+"\t"+goodsPrice[i]);
 		}
 		System.out.println("--------------------");
 
