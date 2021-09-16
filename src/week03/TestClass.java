@@ -18,15 +18,26 @@ class Goods {
 	//构造方法,无参数
 	public Goods() {
 		// TODO Auto-generated constructor stub
-		code="10";
-		name="noname";
-		price=2.0;
+//		name="商品";
+//		price=2;
+//		code="1";
+		
+		this("1", "noname", 2.0);//调用构造方法，第一条语句
+		System.out.println("");
 	}
 	//带参数的构造方法
 	public Goods(String code){
 		this.code=code;
 		name="noname";
 		price=2.0;
+	}
+	
+	public Goods(String code, String name, double price) {
+		//super();//继承
+		//this();
+		this.code = code;
+		this.name = name;
+		this.price = price;
 	}
 
 	// 属性值操作---公开的方法
