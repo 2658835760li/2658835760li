@@ -26,10 +26,13 @@ public class Person {
 			System.out.println("请出拳，1-剪刀，2-石头，3-布，输入数字出拳：");
 			f=in.nextInt();
 		}while(f>3|f<1);
-		
+		System.out.println(name+"出拳:"+f);
 		return f;//出拳的结果值
 	}
-	
+	//胜利加分
+	public void win(){
+		score++;
+	}
 	
 	//set和get
 	public String getName() {

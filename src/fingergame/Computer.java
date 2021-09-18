@@ -15,10 +15,16 @@ public class Computer {
 		this.name=name;
 	}
 	//出拳。1-剪刀，2-石头，3-布
+	//随机1-3
 	public int finger(){
-		return 1;//出拳的结果值
+		int f=(int)(Math.random()*10)%3+1;
+		System.out.println(name+"出拳:"+f);
+		return f;//出拳的结果值
 	}
-	
+	//胜利加分
+	public void win(){
+		score++;
+	}
 	
 	//set和get
 	public String getName() {
