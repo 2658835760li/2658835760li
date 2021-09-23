@@ -6,6 +6,8 @@ public class Game {
 	Person player1;// 玩家1--人
 	Computer player2;// 玩家2-电脑
 	int count = 0;// 游戏的次数
+	//难度hard胜率 40%，easy 60%
+	//随机1，2，3，胜率1，2，3，
 
 	// 进行游戏
 	public void start() {
