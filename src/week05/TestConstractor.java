@@ -13,8 +13,10 @@ class Father extends GrandFather{
 	}
 }
 class Son extends Father{
-	public Son() {
+	//方法
+	public  Son() {
 		// TODO Auto-generated constructor stub
+		super();//父类的构造方法，1-放在构造方法中，2-放第一条语句
 		System.out.println("调用Son");
 	}
 }
