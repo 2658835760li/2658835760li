@@ -9,8 +9,17 @@ interface USB{
 	public static final int line=4;//4个引脚
 	double weidth=8.2;//宽度,省略public static final
 	double height=5.1;//高度,省略public static final
-	//方法--抽象，省略abstract
+	 //方法--抽象，省略abstract
+	//1-抽象方法 
 	void inUse();//即插即用
+	 //2-默认方法
+	default void fun1(){
+		//方法体
+	}
+	//3-静态方法
+	static void fun2(){
+		//方法体
+	}
 	
 }
 

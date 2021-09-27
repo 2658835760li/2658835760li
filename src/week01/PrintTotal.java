@@ -19,7 +19,7 @@ public class PrintTotal {
 		float productPrice1 = 7.5f;// Java中小数默认为double类型，
 		// 如果需要使用float类型的小数,+f
 		float productPrice2 = (float) 2.5;// 强制转换成float
-
+		
 		int number1 = 2;// 商品数量
 		int number2 = 3;
 		double total1;
