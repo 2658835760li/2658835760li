@@ -49,8 +49,25 @@ class Dog extends Pet{
 }
 
 public class TestDuoTai {
-	
+/*
+ * 
 
+	//没有多态，用重载
+	//重载--每一个种类的宠物，写一个对应的重载方法
+	static void reasePet(Dog d){
+		//喂养宠物，
+		d.eat();
+	}
+	static void reasePet(Cat d){
+		//喂养宠物，
+		d.eat();
+	}
+ */
+	//多态的解决方案
+	static void reasePet(Pet c){
+		//喂养宠物，
+		c.eat();
+	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		//p1有2种类型，
@@ -97,9 +114,6 @@ public class TestDuoTai {
 		//实际招聘子类Student
 
 	}
-	static void reasePet(Pet c){
-		//喂养宠物，
-		c.eat();
-	}
+
 
 }
