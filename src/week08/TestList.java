@@ -1,11 +1,13 @@
 package week08;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.Iterator;
 
 public class TestList {
 
 	public static void main(String[] args) {
+		
 		// TODO Auto-generated method stub
 		//创建ArrayList
 		ArrayList aList=new ArrayList();
@@ -23,13 +25,14 @@ public class TestList {
 		int a=(int) aList.get(0);//集合中的第一个元素
 		//a=ary[6];//下标越界
 		//System.out.println(aList.get(8));// java.lang.IndexOutOfBoundsException
-		//遍历集合
+		//3-遍历集合
 		//[1]for
 		for(int i=0;i<aList.size();i++){
 			System.out.println(aList.get(i));
 		}
-		//[2]foreach
+		//[2]foreach循环
 		System.out.println("----------");
+		
 		for(Object obj:aList){
 			System.out.println(obj);
 		}
@@ -42,7 +45,7 @@ public class TestList {
 			//aList.remove(1);//不能删除集合元素
 			System.out.println(iterator.next());
 		}
-		//查找
+		//4-查找
 		ArrayList nameList=new ArrayList ();
 		nameList.add("tom");
 		nameList.add("jerry");
@@ -51,6 +54,30 @@ public class TestList {
 		nameList.add("sam");
 		//在nameList中查找kate，找到显示index=2，没找到index=-1
 		int index=-1;
+		//for-each循环
+		for(Object obj:nameList){
+			String name=(String) obj;//obj中放nameList集合取出的数据
+			if(name.equals("kate")){
+				//如果集合中取出的姓名是kate，记录这个集合元素的下标
+				index=nameList.indexOf(obj);//找到obj元素在集合中的位置
+				break;
+			}
+			
+		}
+		if (index==-1) {
+			System.out.println("没找到此人");
+		}else {
+			System.out.println("找到"+index);
+		}
+		//简化   indexOf（）
+		index=nameList.indexOf("kate");
+		if(index==-1){
+			System.out.println("没找到此人");
+		}else {
+			System.out.println("找到"+index );
+		}
+		nameList.contains("kate");
+		/*//for循环
 		for(int i=0;i<nameList.size();i++){
 			String name=(String) nameList.get(i);//Object
 			if(name.equals("kate")){
@@ -58,12 +85,16 @@ public class TestList {
 				break;
 			}
 		}
+		
 		if (index==-1) {
 			System.out.println("没找到此人");
 		}else {
 			System.out.println("找到"+index);
 		}
+		*/
+		
 
 	}
 
 }
+
